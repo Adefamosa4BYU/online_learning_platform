@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'courses/style.css' %}">
+    <title>{{ course.title }} - Adefam Online Learning</title>
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+    </nav>
+
+    {% if course %}
+        <h1>{{ course.title }}</h1>
+
+        <p>{{ course.description }}</p>
+
+        <p>
+            <strong>Level:</strong>
+            {{ course.level }}
+        </p>
+
+        <p>
+            <strong>Duration:</strong>
+            {{ course.duration }}
+        </p>
+
+        <h2>Course Information</h2>
+
+        <p>
+            This course is part of the Adefam Online Learning Platform.
+        </p>
+
+        <a href="{% url 'home' %}">Back to Courses</a>
+
+    {% else %}
+        <h1>Course Not Found</h1>
+
+        <a href="{% url 'home' %}">Back to Courses</a>
+    {% endif %}
+
+</body>
+</html>

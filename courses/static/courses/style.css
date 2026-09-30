@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+}
+
+h1 {
+    color: #1f4e79;
+}
+
+h2 {
+    color: #333;
+}
+
+nav {
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1f4e79;
+    font-weight: bold;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f4e79;
+    color: white;
+    cursor: pointer;
+}
+
+.adefam-course-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.adefam-course-card h3 {
+    margin-top: 0;
+}
+
+.adefam-course-card a {
+    color: #1f4e79;
+    text-decoration: none;
+}
+
+.adefam-course-card a:hover {
+    text-decoration: underline;
+}

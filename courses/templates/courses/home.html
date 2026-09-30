@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'courses/style.css' %}">
+    <title>Adefam Online Learning</title>
+</head>
+<body>
+
+    <h1>Welcome to Adefam Online Learning Platform</h1>
+
+    <p>
+    Learn practical technology skills through courses designed
+    for beginners and developing programmers.
+</p>
+
+<p>
+    Search for a course below to find the topic you want to learn.
+</p>
+
+    <h2>Search Courses</h2>
+
+    <form method="GET">
+    <input
+        type="text"
+        name="search"
+        placeholder="Search for a course"
+        value="{{ search_query }}"
+    >
+
+    <button type="submit">Search</button>
+
+    {% if search_query %}
+        <a href="{% url 'home' %}">Clear Search</a>
+    {% endif %}
+</form>
+
+    <p>
+    Courses available:
+    <strong>{{ courses|length }}</strong>
+</p>
+
+    <h2>Available Courses</h2>
+
+    {% for course in courses %}
+        <div class="adefam-course-card">
+            <h3>
+                <a href="{% url 'course_detail' course.id %}">
+                    {{ course.title }}
+                </a>
+            </h3>
+
+            <p>{{ course.description }}</p>
+            <p>Level: {{ course.level }}</p>
+            <p>Duration: {{ course.duration }}</p>
+        </div>
+    {% empty %}
+        <p>No courses found.</p>
+    {% endfor %}
+
+</body>
+</html>

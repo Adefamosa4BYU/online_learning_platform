@@ -12,7 +12,8 @@ Open `http://127.0.0.1:8000/` in a browser.
 
 The purpose of this project is to practice building server-side web applications with Django, Python, and MongoDB.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/t8hgZEjydXs)
+[Github File](https://github.com/Adefamosa4BYU/online_learning_platform)
 
 # Web Pages
 
